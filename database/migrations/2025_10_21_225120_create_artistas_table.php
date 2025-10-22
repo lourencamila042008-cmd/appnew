@@ -11,13 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('evento', function (Blueprint $table) {
+        Schema::create('artistas', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
             $table->string('nombre', 250);
-            $table->string('descripcion', 250);
-            $table->datetime('fecha y hora inicio');
-            $table->datetime('fecha y hora fin');
+            $table->string('apellido', 250);
+            $table->string('genero musical', 250);
+            $table->string('ciudad', 250);
         });
     }
 
@@ -26,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('evento');
+        Schema::dropIfExists('artistas');
     }
 };
